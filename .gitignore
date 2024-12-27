@@ -65,3 +65,5 @@ docker-compose.override.yml
 # Ignore sensitive information
 application.yml
 application.properties
+target/spring-boot-app-0.0.1-SNAPSHOT.jar
+target/spring-boot-app-0.0.1-SNAPSHOT.jar.original
