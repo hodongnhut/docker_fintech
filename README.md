@@ -14,6 +14,46 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 - [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
 ```
+Pre-requisites
+Ensure you have Java Development Kit (JDK) installed:
+
+bash
+Copy code
+java -version
+If not, install it (e.g., OpenJDK):
+
+bash
+Copy code
+sudo apt install openjdk-17-jdk
+Ensure Maven is installed:
+
+bash
+Copy code
+mvn -version
+If not, install it:
+
+bash
+Copy code
+sudo apt install maven
+
+Build the JAR
+Navigate to Your Project Directory:
+
+bash
+Copy code
+cd /path/to/your/spring-boot-project
+Run Maven Build Command: Use the following command to build the project:
+
+bash
+Copy code
+mvn clean package
+Locate the JAR File: After a successful build, the JAR file will be located in the target/ directory:
+
+plaintext
+Copy code
+/path/to/your/spring-boot-project/target/application.jar
+
+
 cd existing_repo
 git remote add origin https://git02.smartosc.com/nhuthd/docker-fintech.git
 git branch -M main
