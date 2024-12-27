@@ -1,12 +1,50 @@
+server:
+  port: 8080                 # The port your application will run on
+
 spring:
+  application:
+    name: fintech-application # Application name
   datasource:
     url: jdbc:postgresql://localhost:5432/mydb
     username: myuser
     password: mypassword
     driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10                   # Maximum number of connections in the pool
+      minimum-idle: 2                         # Minimum number of idle connections
+      idle-timeout: 30000                     # Connection idle timeout (ms)
+      max-lifetime: 1800000                   # Maximum lifetime of a connection in the pool (ms)
+      connection-timeout: 30000               # Maximum time to wait for a connection (ms)
+
+  liquibase:
+    enabled: false                             # Enable Liquibase for migrations
+    change-log: classpath:db/changelog/db.changelog-master.xml # Path to master changelog file
+
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none                          # Set to 'none' since Liquibase manages schema
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect # Hibernate Dialect for PostgreSQL
+        show_sql: true                         # Log SQL queries to the console
+        format_sql: true                       # Format SQL queries in logs for better readability
+
+logging:
+  level:
+    root: info                                # Default logging level
+    org.springframework: info                 # Logging level for Spring Framework
+    org.hibernate.SQL: debug 
+    liquibase: debug                          # Log Hibernate-generated SQL queries
+  file:
+    name: logs/application.log                # Log file location
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"                         # Enable all management endpoints
+  metrics:
+    export:
+      prometheus:
+        enabled: true                        # Enable Prometheus metrics (optional)
+
