@@ -1,0 +1,67 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+
+# Compiled JAR files
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+!**/src/main/resources/static/**
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+
+# VSCode
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Build directories
+build/
+bin/
+
+# Temporary files
+*.tmp
+
+# Configuration files
+*.env
+
+# IDE-specific files
+*.swp
+
+# Docker
+docker-compose.override.yml
+
+# Application-specific
+.env
+*.sql
+*.sqlite
+
+# Test reports
+*.out
+*.diff
+
+# Spring Boot Devtools
+.restart
+
+# Ignore sensitive information
+application.yml
+application.properties
