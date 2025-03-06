@@ -106,8 +106,8 @@
                 <configuration>
                     <changeLogFile>src/main/resources/db/changelog/db.changelog-master.xml</changeLogFile>
                     <url>jdbc:postgresql://localhost:5432/mydb</url>
-                    <username>myuser</username>
-                    <password>mypassword</password>
+                    <username>root</username>
+                    <password>root</password>
                     <driver>org.postgresql.Driver</driver>
                 </configuration>
             </plugin>
