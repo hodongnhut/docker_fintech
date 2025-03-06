@@ -11,8 +11,8 @@ services:
       - rabbitmq
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/mydb
-      SPRING_DATASOURCE_USERNAME: myuser
-      SPRING_DATASOURCE_PASSWORD: mypassword
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
       SPRING_REDIS_HOST: redis
     networks:
       - app-network
@@ -33,8 +33,8 @@ services:
     image: postgres:14
     container_name: postgres
     environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
       POSTGRES_DB: mydb
     ports:
       - "5432:5432"
