@@ -14,7 +14,6 @@ logs/
 *.ear
 
 # Maven
-target/
 !**/src/main/resources/static/**
 
 # IntelliJ IDEA
