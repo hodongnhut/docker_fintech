@@ -64,4 +64,3 @@ docker-compose.override.yml
 # Ignore sensitive information
 application.yml
 application.properties
-target/application.jar
